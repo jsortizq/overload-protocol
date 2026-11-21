@@ -178,9 +178,6 @@ func _advance(p: Projectile, space: PhysicsDirectSpaceState2D) -> void:
 					p.bounces -= 1
 					dir = dir.bounce(hit["normal"]).normalized()
 					p.vel = dir * speed
-					# Step off the surface, otherwise the next ray starts inside
-					# the wall and reports the same contact again.
-					p.pos += hit["normal"] * 0.5
 					# A ricochet may hit enemies it already pierced.
 					p.exclude.clear()
 					game.stats["ricochets"] += 1
