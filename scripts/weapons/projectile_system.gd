@@ -38,8 +38,6 @@ class Projectile:
 	## RIDs this bullet must ignore (enemies already pierced, player during i-frames).
 	var exclude: Array[RID] = []
 
-	## Every field must be reset here, or a recycled slot inherits state
-	## from its previous life (see tasks/bug-02).
 	func reset() -> void:
 		active = false
 		hostile = false
@@ -54,7 +52,6 @@ class Projectile:
 		chain = 0
 		life = 0.0
 		color = Color.WHITE
-		exclude.clear()
 
 
 var game: Game
