@@ -116,6 +116,16 @@ godot --headless --fixed-fps 60 --path . --script res://tools/replay.gd -- user:
 ![Upgrade choice](docs/screenshot_upgrade.png)
 ![Boss fight with the debug overlay](docs/screenshot_boss_debug.png)
 
+## Part of a three-game portfolio
+
+| Project | Focus |
+|---------|-------|
+| [Signal Breach](https://github.com/jsortizq/signal-breach) | Turn-based grid stealth: deterministic simulation, guard FSM, vision, undo |
+| [Overload Protocol](https://github.com/jsortizq/overload-protocol) | Real-time 2D arena shooter: fixed-tick sim, modular weapons, pooled swept-ray projectiles, boss |
+| [Relay Station](https://github.com/jsortizq/relay-station) | 3D third-person systems sandbox: power graph, inventory & crafting, physics props, nav drone, versioned saves |
+
+Each one has a headless test suite in CI and a `tasks/` folder of bug and feature challenges.
+
 ## License
 
 MIT
