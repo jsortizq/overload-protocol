@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="WeaponModule" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_module.gd" id="1_mod"]
+
+[resource]
+script = ExtResource("1_mod")
+id = "heavy"
+display_name = "Heavy Slug"
+description = "+80% damage, double knockback, slower shots and fire rate."
+color = Color(1, 0.6, 0.25, 1)
+damage_mult = 1.8
+knockback_mult = 2.0
+speed_mult = 0.8
+fire_rate_mult = 0.8

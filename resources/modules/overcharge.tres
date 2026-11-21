@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WeaponModule" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_module.gd" id="1_mod"]
+
+[resource]
+script = ExtResource("1_mod")
+id = "overcharge"
+display_name = "Overcharge"
+description = "On hit, arcs to 2 nearby enemies for 50% damage."
+color = Color(1, 0.85, 0.25, 1)
+add_chain = 2

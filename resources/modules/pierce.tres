@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WeaponModule" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_module.gd" id="1_mod"]
+
+[resource]
+script = ExtResource("1_mod")
+id = "pierce"
+display_name = "Pierce"
+description = "Shots pass through 2 enemies."
+color = Color(0.75, 0.55, 1, 1)
+add_pierce = 2

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WeaponModule" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_module.gd" id="1_mod"]
+
+[resource]
+script = ExtResource("1_mod")
+id = "ricochet"
+display_name = "Ricochet"
+description = "Shots bounce off walls and shields 2 times."
+color = Color(0.3, 0.88, 1, 1)
+add_bounces = 2

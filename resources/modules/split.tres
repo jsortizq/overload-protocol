@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponModule" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_module.gd" id="1_mod"]
+
+[resource]
+script = ExtResource("1_mod")
+id = "split"
+display_name = "Split"
+description = "Fire 2 extra projectiles in a fan. -15% damage."
+color = Color(0.65, 1, 0.45, 1)
+extra_projectiles = 2
+spread_deg = 18.0
+damage_mult = 0.85

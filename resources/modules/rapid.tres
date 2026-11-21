@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="WeaponModule" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/weapon_module.gd" id="1_mod"]
+
+[resource]
+script = ExtResource("1_mod")
+id = "rapid"
+display_name = "Rapid Coil"
+description = "+60% fire rate. -20% damage."
+color = Color(1, 0.45, 0.6, 1)
+fire_rate_mult = 1.6
+damage_mult = 0.8

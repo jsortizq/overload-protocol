@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: 4.3-stable
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Godot
+        run: |
+          curl -sL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}_linux.x86_64" godot
+
+      - name: Import project (builds class cache)
+        run: ./godot --headless --path . --import
+
+      # --fixed-fps 60: one simulation tick per frame, no real-time waiting.
+      - name: Unit + physics integration tests
+        run: ./godot --headless --fixed-fps 60 --path . --script res://tests/run_tests.gd
+
+      - name: Acceptance scenarios
+        run: |
+          for s in ricochet_wall pierce_boss dash_ring; do
+            ./godot --headless --fixed-fps 60 --path . --script res://tools/scenario.gd -- $s
+          done
+
+      - name: Soak (full runs with the autopilot, 3 seeds)
+        run: |
+          for seed in 7 8 9; do
+            ./godot --headless --fixed-fps 60 --path . --script res://tools/soak.gd -- $seed 30000 god | tail -4
+          done
