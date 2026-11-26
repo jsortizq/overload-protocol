@@ -6,7 +6,7 @@ Survive three waves and a three-phase mini-boss. After each wave you install one
 
 ![Combat](docs/screenshot_combat.png)
 
-> **Play:** _itch.io link here_ · **Controls:** WASD move · mouse aim · LMB / J fire · Space / Shift / RMB dash (invulnerable) · 1 / 2 pick a module · R restart · F1 debug overlay · F2 save replay
+> **Play:** [jsortizq.itch.io/overload-protocol](https://jsortizq.itch.io/overload-protocol) (runs in the browser) · **Controls:** WASD move · mouse aim · LMB / J fire · Space / Shift / RMB dash (invulnerable) · 1 / 2 pick a module · R restart · F1 debug overlay · F2 save replay
 
 ---
 
